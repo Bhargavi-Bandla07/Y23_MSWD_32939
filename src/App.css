@@ -1,0 +1,58 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+}
+
+
+.header-container {
+  display: flex;
+  /* align-items: center; Vertically center items */
+  justify-content: space-between;
+  /* Position children with space between */
+}
+
+
+.faculty-container {
+  display: flex;
+  flex-direction: row;
+  /* Align items horizontally */
+  gap: 150px;
+  /* Adjust the space between the items */
+  padding: 50px;
+  /*Optional padding around the container*/
+
+}
+
+.faculty-item {
+  border: 1px solid #ddd;
+  /* Border for card-like structure */
+  border-radius: 8px;
+  /* Rounded corners */
+  padding: 20px;
+  /* Padding inside the item */
+  background-color: #fff;
+  /* Background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for card effect */
+  max-width: 300px;
+  /* Maximum width of each item ( it helps to adjusts cards horizontally)*/
+  min-width: 250px;
+  /* Ensure items are not too small (( it helps to adjusts cards horizontally)*/
+  display: flex;
+  /* Use flexbox to align content */
+
+}
+
+.faculty-item ul {
+  list-style-type: none;
+  /* Remove default list styling */
+  padding: 0;
+  /* Remove default padding */
+  margin: 0;
+  /* Remove default margin */
+}
+
+.faculty-item li {
+  margin-bottom: 10px;
+  /* Space between list items */
+}
