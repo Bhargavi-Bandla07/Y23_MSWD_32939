@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './GitHubData.css';
+import './GitHubData.css'; // Assuming you have a separate CSS file for styling
 
 const GitHubData = () => {
-  // Initialize data as an empty array
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(null);
   const [response, setResponse] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         // Replace 'username' with the actual GitHub username
-        const result = await axios.get("https://api.github.com/users/username/repos");
-        console.log(result.data); // Log the response data to inspect its structure
-        setData(result.data); // Assuming result.data is an array
+        const result = await axios.get("");
+        setData(result.data);
       } catch (error) {
         setResponse("Unable to connect");
       }
@@ -24,7 +22,7 @@ const GitHubData = () => {
 
   return (
     <div className="card-container">
-      {data.length > 0 ? (
+      {data ? (
         data.map((repo) => (
           <div className="card" key={repo.id}>
             <h3>{repo.name}</h3>
